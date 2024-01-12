@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "skipLibCheck": true, // 타입 선언 파일들의 타입 검사를 건너뜁니다. 성능 최적화에 유용합니다.
+    "strict": true, // 모든 엄격한 타입 검사 옵션을 활성화합니다. 코드의 안정성을 높입니다.
+    "target": "es5", // 컴파일된 JavaScript의 타겟 버전을 ES5로 지정합니다.
+    "lib": ["dom", "dom.iterable", "esnext"], // DOM 관련 타입과 최신 ECMAScript 기능을 포함합니다.
+    "allowJs": true, // JavaScript 파일의 컴파일을 허용합니다.
+    "module": "esnext", // 모듈 시스템으로 최신 ECMAScript 모듈을 사용합니다.
+    "moduleResolution": "bundler", // 번들러를 사용한 모듈 해석을 의미합니다.
+    "isolatedModules": true, // 각 파일을 독립적인 모듈로 취급하여 트랜스파일합니다. Babel과 같은 도구와의 호환성에 유용합니다.
+    "resolveJsonModule": true, // JSON 파일을 모듈로 임포트할 수 있게 합니다.
+    "jsx": "preserve", // JSX 구문을 보존합니다. React와 같은 라이브러리에서 사용됩니다.
+    "incremental": true, // 증분 컴파일을 활성화하여 빌드 시간을 단축합니다.
+    "noEmit": true, // 컴파일 결과로 JavaScript 파일을 출력하지 않습니다. 타입 체크만을 목적으로 할 때 유용합니다.
+    "esModuleInterop": true, // CommonJS와 ES 모듈 간의 상호 운용성을 위한 설정입니다.
     "plugins": [
       {
         "name": "next"
