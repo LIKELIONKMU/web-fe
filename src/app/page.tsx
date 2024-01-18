@@ -1,3 +1,13 @@
+'use client'
+
+import React from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function Page() {
-  return <h1>Hello, Home page!</h1>
+  const router = useRouter()
+
+  React.useEffect(() => {
+    router.push('/About')
+  }, [])
+  return <h1>LikeLion x KMU ...</h1>
 }
