@@ -1,5 +1,7 @@
 'use client'
 
+import { Css } from '@mui/icons-material'
+import { CssBaseline } from '@mui/material'
 import {
   StyledEngineProvider,
   ThemeProvider,
@@ -40,11 +42,23 @@ const MuiThemeProvider = ({ children }: { children: React.ReactNode }) => {
       white: { main: '#1A1A1A' },
       primary: { main: '#FF7710' },
     },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: {
+            backgroundColor: '#111',
+          },
+        },
+      },
+    },
   })
 
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
     </StyledEngineProvider>
   )
 }
