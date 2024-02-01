@@ -4,7 +4,8 @@ import '../styles/reset.css'
 import type { Metadata } from 'next'
 import { Pretendard } from '../styles/font'
 import MuiThemeProvider from '../styles/MuiThemeProvider'
-import MainLayout from '../components/Main/MainLayout'
+import MainLayout from './_panel/MainLayout'
+import NavBar from './_panel/NavBar'
 
 export const meta: Metadata = {
   title: 'likelion-kmu',
@@ -21,6 +22,7 @@ export default function RootLayout({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body className={Pretendard.className}>
         <MuiThemeProvider>
+          <NavBar />
           <MainLayout>{children}</MainLayout>
         </MuiThemeProvider>
       </body>

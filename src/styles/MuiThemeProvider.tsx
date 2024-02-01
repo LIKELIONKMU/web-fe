@@ -8,6 +8,37 @@ import {
   createTheme,
 } from '@mui/material/styles'
 declare module '@mui/material/styles' {
+  interface TypographyVariants {
+    Title1Emphasis: React.CSSProperties
+    Title1: React.CSSProperties
+    Title2Emphasis: React.CSSProperties
+    Title2: React.CSSProperties
+    Title3Emphasis: React.CSSProperties
+    Title3: React.CSSProperties
+    Body1Emphasis: React.CSSProperties
+    Body1: React.CSSProperties
+    Body2Emphasis: React.CSSProperties
+    Body2: React.CSSProperties
+    CaptionEmphasis: React.CSSProperties
+    Caption: React.CSSProperties
+    Tag: React.CSSProperties
+  }
+
+  interface TypographyVariantsOptions {
+    Title1Emphasis?: React.CSSProperties
+    Title1?: React.CSSProperties
+    Title2Emphasis?: React.CSSProperties
+    Title2?: React.CSSProperties
+    Title3Emphasis?: React.CSSProperties
+    Title3?: React.CSSProperties
+    Body1Emphasis?: React.CSSProperties
+    Body1?: React.CSSProperties
+    Body2Emphasis?: React.CSSProperties
+    Body2?: React.CSSProperties
+    CaptionEmphasis?: React.CSSProperties
+    Caption?: React.CSSProperties
+    Tag?: React.CSSProperties
+  }
   interface Palette {
     orange: Palette['primary'] //#FF7710
     lightGray: Palette['primary'] //#C5C5C5
@@ -56,7 +87,7 @@ const MuiThemeProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         {children}
       </ThemeProvider>
     </StyledEngineProvider>

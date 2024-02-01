@@ -3,7 +3,11 @@
     "skipLibCheck": true, // 타입 선언 파일들의 타입 검사를 건너뜁니다. 성능 최적화에 유용합니다.
     "strict": true, // 모든 엄격한 타입 검사 옵션을 활성화합니다. 코드의 안정성을 높입니다.
     "target": "es5", // 컴파일된 JavaScript의 타겟 버전을 ES5로 지정합니다.
-    "lib": ["dom", "dom.iterable", "esnext"], // DOM 관련 타입과 최신 ECMAScript 기능을 포함합니다.
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // DOM 관련 타입과 최신 ECMAScript 기능을 포함합니다.
     "allowJs": true, // JavaScript 파일의 컴파일을 허용합니다.
     "module": "esnext", // 모듈 시스템으로 최신 ECMAScript 모듈을 사용합니다.
     "moduleResolution": "bundler", // 번들러를 사용한 모듈 해석을 의미합니다.
@@ -19,7 +23,15 @@
       }
     ],
     "paths": {
-      "@/": ["./src/"]
+      "@/": [
+        "./src/*"
+      ],
+      "@/component/*": [
+        "./src/app/_component/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ]
     }
   },
   "include": [
@@ -29,5 +41,7 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
